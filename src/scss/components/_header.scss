@@ -1,0 +1,76 @@
+.header {
+  margin-bottom: 15px;
+  box-shadow: 0 1px 8px rgb(42 61 71 / 29%);
+
+  &__container {
+    @include flex-all-sb;
+
+    padding-top: 13px;
+    padding-bottom: 11px;
+  }
+
+  &__logo {
+    margin-right: 33px;
+  }
+
+  &__btn {
+    margin-right: 14px;
+    margin-bottom: 6px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    padding-left: 100px;
+    font-size: 14px;
+    line-height: 1.2;
+    color: var(--dark-color);
+    background-image: url("../../img/mail.png");
+    background-position: center;
+    background-size: 36px 28px;
+    background-repeat: no-repeat;
+  }
+}
+
+.nav {
+  margin-right: 244px;
+  margin-bottom: 7px;
+
+  &__list {
+    @include flex-all-sb;
+  }
+
+  &__item {
+    background-position: left center;
+    background-size: 19px 117px;
+    background-repeat: no-repeat;
+
+    &:not(:first-child) {
+      padding-left: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 46px;
+    }
+
+    &--categories {
+      background-image: url("../../img/category.svg");
+    }
+
+    &--blog {
+      background-image: url("../../img/blog.svg");
+    }
+
+    &--reviews {
+      background-image: url("../../img/reviews.svg");
+    }
+
+    &--cart {
+      background-image: url("../../img/cart.svg");
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    color: var(--dark-color);
+  }
+}
