@@ -111,4 +111,16 @@ a {
   display: grid;
   grid-gap: 40px;
   grid-template-columns: repeat(8, 1fr);
+  row-gap: 20px;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 33px;
+  font-family: "Bitter", sans-serif;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 1.05;
+  letter-spacing: -0.7px;
+  color: var(--dark-color);
 }
