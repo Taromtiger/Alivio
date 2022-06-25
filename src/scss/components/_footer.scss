@@ -1,0 +1,238 @@
+.footer {
+  padding-top: 55px;
+  background-color: #f7f9fa;
+
+  &__top {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid #536d7a;
+    padding-bottom: 80px;
+
+    @include mini-tablet {
+      flex-wrap: wrap;
+    }
+
+    @include small-tablet {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__info {
+    margin-right: 40px;
+    width: 100%;
+    max-width: 357px;
+
+    @include mini-tablet {
+      margin-bottom: 20px;
+      max-width: 400px;
+    }
+
+    @include small-tablet {
+      margin-right: 0;
+      width: 100%;
+      max-width: 767px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 6px;
+  }
+
+  &__social-list {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__social-link {
+    display: block;
+    width: 38px;
+    height: 38px;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: var(--very-dark-color);
+      object-fit: cover;
+      transition: fill 0.3s ease-in-out;
+    }
+
+    &:hover {
+      svg {
+        fill: #14793c;
+      }
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--dark-color);
+  }
+
+  &__blog {
+    margin-right: 46px;
+    width: 100%;
+    max-width: 350px;
+
+    @include mini-tablet {
+      margin-right: 10px;
+      margin-bottom: 20px;
+      max-width: 371px;
+    }
+
+    @include small-tablet {
+      margin-right: 0;
+      width: 100%;
+      max-width: 767px;
+    }
+  }
+
+  &__article {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &-img {
+      border-radius: 7px;
+      height: 100px;
+    }
+
+    &-title {
+      margin: 0;
+      padding-left: 10px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.12;
+      color: var(--dark-color);
+    }
+  }
+
+  &__blog-title,
+  &__about-title {
+    margin: 0;
+    margin-bottom: 12px;
+    font-family: "Bitter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 1.17;
+    letter-spacing: -0.6px;
+    color: var(--very-dark-color);
+  }
+
+  &__about {
+    width: 100%;
+    max-width: 357px;
+
+    @include small-tablet {
+      margin-right: 0;
+      width: 100%;
+      max-width: 767px;
+    }
+  }
+
+  &__about-form {
+    display: flex;
+    margin-bottom: 19px;
+    border-radius: 5px 0 0 5px;
+    width: 100%;
+    box-shadow: (0 4px 4px rgb(0 0 0 / 25%));
+  }
+
+  &__about-input {
+    border: 1px solid #aabcc5;
+    border-radius: 5px 0 0 5px;
+    padding: 15px;
+    width: 100%;
+    height: 51px;
+    color: #536d7a;
+  }
+
+  &__about-btn {
+    border: 1px solid #aabcc5;
+    border-radius: 0 5px 5px 0;
+    padding: 15px 21px;
+    box-shadow: (0 4px 4px rgb(0 0 0 / 25%));
+    font-size: 12px;
+    line-height: 1.66;
+    color: var(--light-color);
+    background-color: #768f9c;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #647680;
+    }
+  }
+
+  &__about-list {
+    margin-bottom: 21px;
+    border-bottom: 1px solid #536d7a;
+    padding-bottom: 27px;
+
+    @include small-tablet {
+      border-bottom: none;
+    }
+  }
+
+  &__about-item:not(:last-child) {
+    margin-bottom: 7px;
+  }
+
+  &__about-link {
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--dark-color);
+    transition: border-bottom 0.3s ease-in-out;
+
+    &:hover {
+      border-bottom: 1px solid #536d7a;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 21px 0;
+
+    @include mobile {
+      align-items: flex-start;
+    }
+  }
+
+  &__bottom-list {
+    display: flex;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__bottom-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__bottom-link,
+  &__bottom-name {
+    font-size: 12px;
+    line-height: 1.67;
+    color: var(--dark-color);
+  }
+
+  &__bottom-author {
+    display: flex;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__bottom-name:not(:last-child) {
+    margin-right: 5px;
+  }
+}

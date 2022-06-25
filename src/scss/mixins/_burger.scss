@@ -2,17 +2,25 @@
 
 @mixin burger {
   --burger-width: 30px;
-  --burger-height: 30px;
+  --burger-height: 22px;
   --burger-line-height: 2px;
 
-  position: relative;
+  position: absolute;
+  display: none;
   border: none;
+  right: 15px;
+  top: 23px;
+  z-index: 1000;
   padding: 0;
   width: var(--burger-width);
   height: var(--burger-height);
   color: #000;
   background-color: transparent;
   cursor: pointer;
+
+  @include small-tablet {
+    display: block;
+  }
 
   &::before,
   &::after {

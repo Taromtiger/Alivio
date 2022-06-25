@@ -8,15 +8,27 @@
     padding: 50px;
     padding-bottom: 46px;
     background-color: var(--grayish-color);
+
+    @include mobile {
+      padding: 15px;
+    }
   }
 
   &__img {
     grid-column: 4 span;
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__info {
     grid-column: 4 span;
     padding-left: 5px;
+
+    @include small-tablet {
+      grid-column: 8 span;
+    }
   }
 
   &__subtitle {
@@ -34,8 +46,16 @@
     font-family: "Bitter", sans-serif;
     font-weight: 400;
     font-size: 47px;
-    line-height: 52px;
+    line-height: 1.1;
     color: var(--dark-color);
+
+    @include mini-tablet {
+      font-size: 30px;
+    }
+
+    @include mobile {
+      font-size: 25px;
+    }
   }
 
   &__text {
@@ -44,6 +64,10 @@
     font-size: 18px;
     line-height: 1.33;
     color: var(--very-dark-color);
+
+    @include mini-tablet {
+      font-size: 15px;
+    }
   }
 
   &__btn {
@@ -51,9 +75,22 @@
     padding: 16px 18px 15px 19px;
     font-size: 15px;
     line-height: 1.33;
-    // -webkit-text-stroke: 1px #000;
     text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
     color: var(--light-color);
     background-color: #17a550;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #14793c;
+    }
+  }
+
+  @include mini-tablet {
+    padding-top: 80px;
+  }
+
+  @include small-tablet {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }

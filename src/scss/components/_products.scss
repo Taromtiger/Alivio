@@ -10,6 +10,7 @@
     padding: 30px 40px 31px 30px;
     background-image: url("../../img/best-bg.png");
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 
     &-title {
@@ -31,6 +32,23 @@
         width: 50px;
         height: 50px;
         background-image: url("../../img/instrument.svg");
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      @include mini-tablet {
+        font-size: 23px;
+      }
+
+      @include small-tablet {
+        margin-bottom: 25px;
+        font-size: 20px;
+      }
+
+      @include mobile {
+        padding-left: 0;
       }
     }
 
@@ -42,27 +60,81 @@
       text-align: center;
       color: var(--light-color);
       background-color: #17a550;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #14793c;
+      }
+
+      @include small-tablet {
+        margin-left: 65px;
+      }
+
+      @include mobile {
+        margin-left: 0;
+      }
+    }
+
+    @include mini-tablet {
+      margin-bottom: 60px;
+    }
+
+    @include small-tablet {
+      display: block;
+    }
+  }
+
+  &__img {
+    @include small-tablet {
+      width: 300px;
+    }
+
+    @include mobile {
+      width: 230px;
     }
   }
 
   &__title {
     margin-bottom: 33px;
+
+    @include mobile {
+      font-size: 31px;
+      text-align: center;
+    }
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
     margin-bottom: 43px;
+
+    @include small-tablet {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
     position: relative;
     border-radius: 10px;
-    // box-shadow: (0 4px 4px rgb(0 0 0 / 25%))  hover
     background-color: #f7f9fa;
 
     &:not(:last-child) {
       margin-right: 40px;
+    }
+
+    @include small-tablet {
+      display: flex;
+
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
   }
 
@@ -72,14 +144,26 @@
     top: 13px;
     border-radius: 3px;
     padding: 5px 10px;
-    font-size: 12px;
-    line-height: 1.67;
-    color: var(--light-color);
     background: rgb(29 47 56 / 80%);
+
+    &-link {
+      font-size: 12px;
+      line-height: 1.67;
+      color: var(--light-color);
+    }
+
+    @include mobile {
+      left: 12%;
+      top: 3%;
+    }
   }
 
   &__info {
     padding: 20px 37px 39px 25px;
+
+    @include mini-tablet {
+      padding: 10px 14px 14px 10px;
+    }
   }
 
   &__subtitle {
@@ -91,6 +175,18 @@
     line-height: 1.17;
     letter-spacing: -0.7px;
     text-shadow: (0 4px 4px rgb(0 0 0 / 25%));
+
+
+    @include mini-tablet {
+      font-size: 20px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__link {
     color: var(--dark-color);
   }
 
@@ -110,5 +206,14 @@
     background-position: left;
     background-size: 20px 20px;
     background-repeat: no-repeat;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: #14793c;
+    }
+  }
+
+  @include mini-tablet {
+    margin-bottom: 60px;
   }
 }
