@@ -1,0 +1,114 @@
+.submit {
+  margin-bottom: 15px;
+
+  &__info {
+    border-radius: 10px;
+    padding: 50px;
+    background-image: url("../../img/submit-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include mini-tablet {
+      grid-gap: 15px;
+      padding: 20px;
+    }
+  }
+
+  &__left {
+    grid-column: 4 span;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__right {
+    grid-column: 4 span;
+
+    @include small-tablet {
+      grid-column: 8 span;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    margin-bottom: 45px;
+    padding-top: 20px;
+    padding-left: 74px;
+    font-family: "Bitter", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.17;
+    letter-spacing: -0.7px;
+    color: var(--dark-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 8px;
+      width: 60px;
+      height: 60px;
+      background-image: url("../../img/mail.svg");
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 26px;
+    padding-left: 5px;
+    font-size: 18px;
+    line-height: 1.33;
+    color: var(--dark-color);
+  }
+
+  &__form {
+    padding-left: 6px;
+  }
+
+  &__input {
+    margin-bottom: 30px;
+    border: 1px solid #aabcc5;
+    border-radius: 5px;
+    padding: 15px;
+    padding-bottom: 13px;
+    width: 100%;
+    max-width: 500px;
+    font-size: 12px;
+    line-height: 1.67;
+    color: #536d7a;
+    background-color: var(--light-color);
+
+    &:required {}
+  }
+
+  &__btn {
+    margin-right: 6px;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.67;
+    color: #000;
+    background-color: #ffc728;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #f8b600;
+    }
+  }
+
+  &__link {
+    font-size: 12px;
+    line-height: 1.67;
+    color: #536d7a;
+    transition: border-bottom 0.3s ease-in-out;
+
+    &:hover {
+      border-bottom: 1px solid #536d7a;
+    }
+  }
+
+  @include small-tablet {}
+}

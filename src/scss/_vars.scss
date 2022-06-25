@@ -2,11 +2,16 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
+  --font-family: "Raleway", sans-serif;
+  --content-width: 1150px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
   --light-color: #fff;
+  --dark-color: #1d2f38;
+  --grayish-color: #e3ebf1;
+  --light-gray-color: #d8d8d8;
+  --lime-color: #10843f;
+  --very-dark-color: #333;
 }

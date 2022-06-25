@@ -36,7 +36,8 @@ a {
 }
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
 }
 
 .btn-reset {
@@ -104,4 +105,40 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(8, 1fr);
+  row-gap: 20px;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 33px;
+  font-family: "Bitter", sans-serif;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 1.05;
+  letter-spacing: -0.7px;
+  color: var(--dark-color);
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 140;
+  background-color: rgba(#000, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
